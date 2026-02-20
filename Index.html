@@ -1,0 +1,630 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Viaggio in Turchia — Itinerario Giorno per Giorno</title>
+  <style>
+    :root{
+      --maxw:1100px;
+      --accent:#1b6fb3;
+      --muted:#6b7280;
+      --card-bg:#ffffff;
+      --page-bg:#f6f7f9;
+      --radius:10px;
+      --gap:14px;
+      --sidew:420px;
+      --map-h:300px;
+      --map-large-h:420px;
+    }
+    html,body{height:100%;margin:0;font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; background:var(--page-bg); color:#111;}
+    header{background:linear-gradient(90deg,#fff,#f0fbff);border-bottom:1px solid #e6eef6;padding:28px 18px;text-align:center}
+    header h1{margin:0;font-size:26px;color:var(--accent)}
+    header p{margin:8px 0 0;color:var(--muted)}
+    main{max-width:var(--maxw);margin:26px auto;padding:0 18px 60px}
+    .card{background:var(--card-bg);border-radius:var(--radius);box-shadow:0 6px 18px rgba(20,20,30,0.05);padding:16px;margin-bottom:18px}
+    table.toc{width:100%;border-collapse:collapse;margin-top:8px}
+    table.toc th, table.toc td{border:1px solid #eef3f7;padding:8px;text-align:left;font-size:14px}
+    table.toc th{background:#fbfdff;color:#0b4f7a}
+    .day{margin:22px 0;padding:16px;border-radius:var(--radius);background:var(--card-bg);box-shadow:0 6px 18px rgba(20,20,30,0.04)}
+    .day h2{margin:0 0 6px;color:#123a57;font-size:20px}
+    .date{color:#0b4f7a;font-weight:700;margin-bottom:6px}
+    .meta{color:var(--muted);font-size:14px;margin-bottom:10px}
+    .grid{display:grid;grid-template-columns:1fr var(--sidew);gap:var(--gap);align-items:start}
+    .map{height:var(--map-h);border-radius:8px;overflow:hidden;border:1px solid #e6eef6}
+    .map-large{height:var(--map-large-h);border-radius:8px;overflow:hidden;border:1px solid #e6eef6;margin-top:12px}
+    .program{margin-top:8px}
+    .program h4{margin:8px 0 6px;font-size:16px;color:#0b4f7a}
+    .program ul{margin:0 0 8px 18px;color:#333}
+    .visit-list{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:10px}
+    .visit{background:#fbfdff;border:1px solid #eef6fb;padding:10px;border-radius:8px}
+    .visit strong{display:block;color:#0b4f7a;margin-bottom:6px}
+    .visit p{margin:0;color:#333;font-size:14px}
+    .visit a{color:var(--accent);text-decoration:none;font-size:13px;margin-left:6px}
+    .links {margin-top:8px}
+    .back-link{display:block;margin-top:10px;font-size:13px}
+    .sleep{margin-top:10px;padding:10px;border-radius:8px;background:#fff8e6;color:#6b4a00;font-weight:700}
+    footer{margin-top:30px;text-align:center;color:var(--muted);font-size:14px;padding-bottom:40px}
+    hr{border:0;border-top:1px solid #eef3f7;margin:22px 0}
+    @media (max-width:980px){:root{--sidew:360px} .grid{grid-template-columns:1fr} .visit-list{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <header id="top">
+    <h1>Viaggio in Turchia — Itinerario Giorno per Giorno</h1>
+    <p>Itinerario ricavato dal file caricato: voli, trasferimenti (in aereo), visite principali, mappe e link informativi.</p>
+  </header>
+
+  <main>
+    <section id="toc" class="card">
+      <h3>Indice sintetico</h3>
+      <table class="toc" aria-label="Indice">
+        <thead>
+          <tr>
+            <th>Giorno</th>
+            <th>Descrizione</th>
+            <th>Pernottamento</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><a href="#day-0">Giorno 0</a></td>
+            <td>BGY — Bergamo Orio al Serio → SAW — Istanbul Sabiha Gökçen • Galata, Istiklal, Taksim</td>
+            <td><a href="https://waltongalata.com/" target="_blank" rel="noopener">Walton Hotels Galata (Istanbul)</a></td>
+          </tr>
+          <tr>
+            <td><a href="#day-1">Giorno 1</a></td>
+            <td>Istanbul: Hagia Sophia, Basilica Cistern, Spice Bazaar</td>
+            <td><a href="https://waltongalata.com/" target="_blank" rel="noopener">Walton Hotels Galata (Istanbul)</a></td>
+          </tr>
+          <tr>
+            <td><a href="#day-2">Giorno 2</a></td>
+            <td>Topkapı Palace; crociera sul Bosforo con cena</td>
+            <td><a href="https://waltongalata.com/" target="_blank" rel="noopener">Walton Hotels Galata (Istanbul)</a></td>
+          </tr>
+          <tr>
+            <td><a href="#day-3">Giorno 3</a></td>
+            <td>Dolmabahçe Palace; pomeriggio opzionale Miniaturk o Çamlıca Tower</td>
+            <td><a href="https://waltongalata.com/" target="_blank" rel="noopener">Walton Hotels Galata (Istanbul)</a></td>
+          </tr>
+          <tr>
+            <td><a href="#day-4">Giorno 4</a></td>
+            <td>Volo IST — Istanbul Airport → NAV — Nevşehir Kapadokya • Arrivo Cappadocia (Uçhisar)</td>
+            <td><a href="https://www.uchisarkayaotel.com/en" target="_blank" rel="noopener">Uçhisar Kaya Hotel (Uçhisar)</a></td>
+          </tr>
+          <tr>
+            <td><a href="#day-5">Giorno 5</a></td>
+            <td>Göreme Open Air Museum, Pigeon Valley; Lover’s Hill (tramonto)</td>
+            <td><a href="https://www.uchisarkayaotel.com/en" target="_blank" rel="noopener">Uçhisar Kaya Hotel (Uçhisar)</a></td>
+          </tr>
+          <tr>
+            <td><a href="#day-6">Giorno 6</a></td>
+            <td>Balloon flight, Zelve Open Air Museum</td>
+            <td><a href="https://www.uchisarkayaotel.com/en" target="_blank" rel="noopener">Uçhisar Kaya Hotel (Uçhisar)</a></td>
+          </tr>
+          <tr>
+            <td><a href="#day-7">Giorno 7</a></td>
+            <td>Kaymaklı Underground City; Trasferimento NAV — Nevşehir Kapadokya → SAW — Istanbul Sabiha Gökçen</td>
+            <td><a href="https://www.marriott.com/en-us/hotels/isnfp-four-points-istanbul-pendik/" target="_blank" rel="noopener">Four Points by Sheraton Istanbul Pendik (Istanbul)</a></td>
+          </tr>
+          <tr>
+            <td><a href="#day-8">Giorno 8</a></td>
+            <td>Volo SAW — Istanbul Sabiha Gökçen → BGY — Bergamo Orio al Serio • Rientro in Italia</td>
+            <td>—</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="flights" class="card">
+      <h3>Dettaglio voli</h3>
+      <ul style="margin:8px 0 0 18px;color:#333">
+        <li><strong>BGY — Bergamo Orio al Serio → SAW — Istanbul Sabiha Gökçen</strong> • <strong>Data:</strong> sabato 22/08/2026 • Partenza: 11:45 • Arrivo: 15:25</li>
+        <li><strong>IST — Istanbul Airport → NAV — Nevşehir Kapadokya</strong> • <strong>Data:</strong> mercoledì 26/08/2026 • Partenza: 11:20 • Arrivo: 12:40</li>
+        <li><strong>NAV — Nevşehir Kapadokya → SAW — Istanbul Sabiha Gökçen</strong> • <strong>Data:</strong> sabato 29/08/2026 • Partenza: 22:30 • Arrivo: 23:30</li>
+        <li><strong>SAW — Istanbul Sabiha Gökçen → BGY — Bergamo Orio al Serio</strong> • <strong>Data:</strong> domenica 30/08/2026 • Partenza: 09:50 • Arrivo: 11:45</li>
+      </ul>
+    </section>
+
+    <!-- Giorno 0 -->
+    <section id="day-0" class="day">
+      <h2>Giorno 0 — Partenza e arrivo a Istanbul (BGY — Bergamo Orio al Serio → SAW — Istanbul Sabiha Gökçen)</h2>
+      <div class="date">sabato 22 agosto 2026</div>
+
+      <div class="grid">
+        <div>
+          <div class="program">
+            <h4>Programma</h4>
+            <ul>
+              <li>Partenza da Bergamo (BGY) e arrivo a Istanbul Sabiha Gökçen (SAW).</li>
+              <li>Trasferimento in hotel e prima esplorazione del quartiere di Galata e Istiklal Avenue.</li>
+              <li>Sera: cena e passeggiata verso Taksim / Galata Tower.</li>
+            </ul>
+          </div>
+
+          <div class="visit-list">
+            <div class="visit">
+              <strong>Walton Hotels Galata</strong>
+              <p>Boutique hotel nel quartiere di Galata, vicino alla Torre di Galata e a Istiklal Avenue.</p>
+              <div class="links">
+                <a href="https://waltongalata.com/" target="_blank" rel="noopener">Sito ufficiale hotel</a>
+                <a href="https://commons.wikimedia.org/w/index.php?search=Walton+Hotels+Galata&title=Special%3AMediaSearch&type=image" target="_blank" rel="noopener">Immagini</a>
+              </div>
+            </div>
+
+            <div class="visit">
+              <strong>Galata Tower e Istiklal Avenue</strong>
+              <p>Iconici punti di interesse di Beyoğlu: vista panoramica dalla torre e vivace via pedonale con negozi e caffè.</p>
+              <div class="links">
+                <a href="https://it.wikipedia.org/wiki/Galata_(Istanbul)" target="_blank" rel="noopener">Maggiori informazioni</a>
+                <a href="https://commons.wikimedia.org/w/index.php?search=Galata+Tower&title=Special%3AMediaSearch&type=image" target="_blank" rel="noopener">Immagini</a>
+              </div>
+            </div>
+          </div>
+
+          <a class="back-link" href="#toc">Torna all'indice</a>
+          <div class="sleep">Pernottamento: Walton Hotels Galata — <a href="https://waltongalata.com/" target="_blank" rel="noopener">sito</a></div>
+        </div>
+
+        <div>
+          <div class="map">
+            <iframe width="100%" height="100%" frameborder="0" style="border:0"
+              src="https://www.google.com/maps?q=Galata+Tower+Istanbul&output=embed" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr />
+
+    <!-- Giorno 1 -->
+    <section id="day-1" class="day">
+      <h2>Giorno 1 — Istanbul: Hagia Sophia, Basilica Cistern, Spice Bazaar</h2>
+      <div class="date">domenica 23 agosto 2026</div>
+
+      <div class="grid">
+        <div>
+          <div class="program">
+            <h4>Programma</h4>
+            <ul>
+              <li>Mattina: visita ad Hagia Sophia e ai suoi esterni.</li>
+              <li>Mezzogiorno: Basilica Cistern e pranzo nei dintorni.</li>
+              <li>Pomeriggio: Spice Bazaar e passeggiata sul lungomare di Eminönü.</li>
+            </ul>
+          </div>
+
+          <div class="visit-list">
+            <div class="visit">
+              <strong>Hagia Sophia (Ayasofya)</strong>
+              <p>Monumento storico di Istanbul, costruito nel VI secolo; ha svolto funzioni di chiesa, moschea e museo.</p>
+              <div class="links">
+                <a href="https://it.wikipedia.org/wiki/Hagia_Sophia" target="_blank" rel="noopener">Maggiori informazioni</a>
+                <a href="https://commons.wikimedia.org/w/index.php?search=Hagia+Sophia&title=Special%3AMediaSearch&type=image" target="_blank" rel="noopener">Immagini</a>
+              </div>
+            </div>
+
+            <div class="visit">
+              <strong>Basilica Cistern (Yerebatan)</strong>
+              <p>Grande cisterna sotterranea bizantina con colonne e le famose teste di Medusa.</p>
+              <div class="links">
+                <a href="https://it.wikipedia.org/wiki/Cisterna_Basilica" target="_blank" rel="noopener">Maggiori informazioni</a>
+                <a href="https://commons.wikimedia.org/w/index.php?search=Basilica+Cistern&title=Special%3AMediaSearch&type=image" target="_blank" rel="noopener">Immagini</a>
+              </div>
+            </div>
+
+            <div class="visit">
+              <strong>Spice Bazaar (Mısır Çarşısı)</strong>
+              <p>Mercato storico delle spezie e dei dolci tipici, situato vicino alla Yeni Camii ed Eminönü.</p>
+              <div class="links">
+                <a href="https://it.wikipedia.org/wiki/Grande_Bazar_d%27Istanbul" target="_blank" rel="noopener">Maggiori informazioni</a>
+                <a href="https://commons.wikimedia.org/w/index.php?search=Spice+Bazaar+Istanbul&title=Special%3AMediaSearch&type=image" target="_blank" rel="noopener">Immagini</a>
+              </div>
+            </div>
+          </div>
+
+          <a class="back-link" href="#toc">Torna all'indice</a>
+          <div class="sleep">Pernottamento: Walton Hotels Galata — <a href="https://waltongalata.com/" target="_blank" rel="noopener">sito</a></div>
+        </div>
+
+        <div>
+          <div class="map">
+            <iframe width="100%" height="100%" frameborder="0" style="border:0"
+              src="https://www.google.com/maps?q=Hagia+Sophia+Basilica+Cistern+Spice+Bazaar&output=embed" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr />
+
+    <!-- Giorno 2 -->
+    <section id="day-2" class="day">
+      <h2>Giorno 2 — Topkapı Palace e crociera sul Bosforo con cena</h2>
+      <div class="date">lunedì 24 agosto 2026</div>
+
+      <div class="grid">
+        <div>
+          <div class="program">
+            <h4>Programma</h4>
+            <ul>
+              <li>Mattina: Visita al Topkapı Palace (museo e cortili).</li>
+              <li>Pomeriggio: tempo libero e passeggiate nei dintorni.</li>
+              <li>Sera: crociera sul Bosforo con cena a bordo (prenotare in anticipo).</li>
+            </ul>
+          </div>
+
+          <div class="visit-list">
+            <div class="visit">
+              <strong>Topkapı Palace</strong>
+              <p>Antica residenza imperiale ottomana, oggi museo con collezioni e il famoso Harem.</p>
+              <div class="links">
+                <a href="https://it.wikipedia.org/wiki/Palazzo_di_Topkap%C4%B1" target="_blank" rel="noopener">Maggiori informazioni</a>
+                <a href="https://commons.wikimedia.org/w/index.php?search=Topkapi+Palace&title=Special%3AMediaSearch&type=image" target="_blank" rel="noopener">Immagini</a>
+              </div>
+            </div>
+
+            <div class="visit">
+              <strong>Crociera sul Bosforo con cena</strong>
+              <p>Crociera serale sul Bosforo con cena a bordo: ottima occasione per vedere le rive europee e asiatiche illuminate.</p>
+              <div class="links">
+                <a href="https://it.wikipedia.org/wiki/Bosforo" target="_blank" rel="noopener">Info sul Bosforo</a>
+                <a href="https://commons.wikimedia.org/w/index.php?search=Bosphorus+cruise&title=Special%3AMediaSearch&type=image" target="_blank" rel="noopener">Immagini</a>
+              </div>
+            </div>
+          </div>
+
+          <a class="back-link" href="#toc">Torna all'indice</a>
+          <div class="sleep">Pernottamento: Walton Hotels Galata — <a href="https://waltongalata.com/" target="_blank" rel="noopener">sito</a></div>
+        </div>
+
+        <div>
+          <div class="map">
+            <iframe width="100%" height="100%" frameborder="0" style="border:0"
+              src="https://www.google.com/maps?q=Topkapi+Palace+Bosphorus&output=embed" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr />
+
+    <!-- Giorno 3 -->
+    <section id="day-3" class="day">
+      <h2>Giorno 3 — Dolmabahçe Palace; pomeriggio opzionale Miniaturk o Çamlıca Tower</h2>
+      <div class="date">martedì 25 agosto 2026</div>
+
+      <div class="grid">
+        <div>
+          <div class="program">
+            <h4>Programma</h4>
+            <ul>
+              <li>Mattina: Visita a Dolmabahçe Palace e i suoi sontuosi interni.</li>
+              <li>Pomeriggio (opzionale): Miniaturk oppure Çamlıca Tower per vista panoramica.</li>
+              <li>Sera: tempo libero e rientro in hotel.</li>
+            </ul>
+          </div>
+
+          <div class="visit-list">
+            <div class="visit">
+              <strong>Dolmabahçe Palace</strong>
+              <p>Palazzo ottomano del XIX secolo sul Bosforo, noto per la sala cerimoniale e gli interni sontuosi.</p>
+              <div class="links">
+                <a href="https://it.wikipedia.org/wiki/Palazzo_di_Dolmabah%C3%A7e" target="_blank" rel="noopener">Maggiori informazioni</a>
+                <a href="https://commons.wikimedia.org/w/index.php?search=Dolmabahce+Palace&title=Special%3AMediaSearch&type=image" target="_blank" rel="noopener">Immagini</a>
+              </div>
+            </div>
+
+            <div class="visit">
+              <strong>Miniaturk (opzionale)</strong>
+              <p>Parco con riproduzioni in miniatura dei monumenti turchi; visita rapida e interessante per panoramica storica.</p>
+              <div class="links">
+                <a href="https://it.wikipedia.org/wiki/Miniat%C3%BCrk" target="_blank" rel="noopener">Maggiori informazioni</a>
+                <a href="https://commons.wikimedia.org/w/index.php?search=Miniaturk&title=Special%3AMediaSearch&type=image" target="_blank" rel="noopener">Immagini</a>
+              </div>
+            </div>
+
+            <div class="visit">
+              <strong>Çamlıca Tower (EN)</strong>
+              <p>Torre panoramica moderna con vista sulla città e sul Bosforo; adatta per foto e relax.</p>
+              <div class="links">
+                <a href="https://en.wikipedia.org/wiki/%C3%87aml%C4%B1ca_Tower" target="_blank" rel="noopener">Maggiori informazioni (Wikipedia EN)</a>
+                <a href="https://commons.wikimedia.org/w/index.php?search=Camlica+Tower&title=Special%3AMediaSearch&type=image" target="_blank" rel="noopener">Immagini</a>
+              </div>
+            </div>
+          </div>
+
+          <a class="back-link" href="#toc">Torna all'indice</a>
+          <div class="sleep">Pernottamento: Walton Hotels Galata — <a href="https://waltongalata.com/" target="_blank" rel="noopener">sito</a></div>
+        </div>
+
+        <div>
+          <div class="map">
+            <iframe width="100%" height="100%" frameborder="0" style="border:0"
+              src="https://www.google.com/maps?q=Dolmabahce+Palace+Miniaturk+Camlica+Tower&output=embed" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr />
+
+    <!-- Giorno 4 -->
+    <section id="day-4" class="day">
+      <h2>Giorno 4 — Trasferimento a Cappadocia (IST — Istanbul Airport → NAV — Nevşehir Kapadokya) e arrivo a Uçhisar</h2>
+      <div class="date">mercoledì 26 agosto 2026</div>
+
+      <div class="grid">
+        <div>
+          <div class="program">
+            <h4>Programma</h4>
+            <ul>
+              <li>Mattina: Volo interno IST → NAV; ritiro auto a noleggio e trasferimento a Uçhisar.</li>
+              <li>Pomeriggio/sera: check-in, visita a Uçhisar Castle e passeggiata serale.</li>
+            </ul>
+          </div>
+
+          <div class="visit-list">
+            <div class="visit">
+              <strong>Uçhisar Kaya Hotel</strong>
+              <p>Hotel ricavato nella roccia con vista su Uçhisar e le formazioni di Cappadocia.</p>
+              <div class="links">
+                <a href="https://www.uchisarkayaotel.com/en" target="_blank" rel="noopener">Sito ufficiale hotel</a>
+                <a href="https://commons.wikimedia.org/w/index.php?search=Uchisar+Kaya+Hotel&title=Special%3AMediaSearch&type=image" target="_blank" rel="noopener">Immagini</a>
+              </div>
+            </div>
+
+            <div class="visit">
+              <strong>Uçhisar Castle (Uçhisar Kalesi)</strong>
+              <p>Formazione rocciosa dominante la regione; salita per panorama a 360° su Cappadocia, ottima al tramonto.</p>
+              <div class="links">
+                <a href="https://it.wikipedia.org/wiki/U%C3%A7hisar" target="_blank" rel="noopener">Maggiori informazioni</a>
+                <a href="https://commons.wikimedia.org/w/index.php?search=Uchisar+Castle&title=Special%3AMediaSearch&type=image" target="_blank" rel="noopener">Immagini</a>
+              </div>
+            </div>
+
+          </div>
+
+          <a class="back-link" href="#toc">Torna all'indice</a>
+          <div class="sleep">Pernottamento: Uçhisar Kaya Hotel — <a href="https://www.uchisarkayaotel.com/en" target="_blank" rel="noopener">sito</a></div>
+        </div>
+
+        <div>
+          <div class="map-large">
+            <iframe width="100%" height="100%" frameborder="0" style="border:0"
+              src="https://www.google.com/maps?q=Istanbul+Airport+to+Nevsehir+Airport+flight&output=embed" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr />
+
+    <!-- Giorno 5 -->
+    <section id="day-5" class="day">
+      <h2>Giorno 5 — Göreme Open Air Museum, Pigeon Valley; Lover’s Hill (tramonto)</h2>
+      <div class="date">giovedì 27 agosto 2026</div>
+
+      <div class="grid">
+        <div>
+          <div class="program">
+            <h4>Programma</h4>
+            <ul>
+              <li>Mattina: Göreme Open Air Museum (chiese rupestri e affreschi).</li>
+              <li>Pomeriggio: passeggiata in Pigeon Valley e visita a punti panoramici.</li>
+              <li>Sera: Lover’s Hill per il tramonto e panorama su Cappadocia.</li>
+            </ul>
+          </div>
+
+          <div class="visit-list">
+            <div class="visit">
+              <strong>Göreme Open Air Museum</strong>
+              <p>Complesso di chiese rupestri con affreschi bizantini, parte del Parco Nazionale di Göreme (UNESCO).</p>
+              <div class="links">
+                <a href="https://it.wikipedia.org/wiki/G%C3%B6reme" target="_blank" rel="noopener">Maggiori informazioni</a>
+                <a href="https://commons.wikimedia.org/w/index.php?search=Goreme+Open+Air+Museum&title=Special%3AMediaSearch&type=image" target="_blank" rel="noopener">Immagini</a>
+              </div>
+            </div>
+
+            <div class="visit">
+              <strong>Pigeon Valley (Güvercinlik Vadisi)</strong>
+              <p>Valle panoramica tra Göreme e Uçhisar, famosa per le 'dovecote' scavate nella roccia.</p>
+              <div class="links">
+                <a href="https://it.wikipedia.org/wiki/Cappadocia" target="_blank" rel="noopener">Maggiori informazioni (Cappadocia)</a>
+                <a href="https://commons.wikimedia.org/w/index.php?search=Pigeon+Valley+Cappadocia&title=Special%3AMediaSearch&type=image" target="_blank" rel="noopener">Immagini</a>
+              </div>
+            </div>
+
+            <div class="visit">
+              <strong>Lover’s Hill (tramonto)</strong>
+              <p>Punto panoramico ideale per il tramonto con vista sulle formazioni rocciose della Cappadocia.</p>
+              <div class="links">
+                <a href="https://it.wikipedia.org/wiki/Cappadocia" target="_blank" rel="noopener">Maggiori informazioni (Cappadocia)</a>
+              </div>
+            </div>
+
+          </div>
+
+          <a class="back-link" href="#toc">Torna all'indice</a>
+          <div class="sleep">Pernottamento: Uçhisar Kaya Hotel — <a href="https://www.uchisarkayaotel.com/en" target="_blank" rel="noopener">sito</a></div>
+        </div>
+
+        <div>
+          <div class="map">
+            <iframe width="100%" height="100%" frameborder="0" style="border:0"
+              src="https://www.google.com/maps?q=Goreme+Open+Air+Museum+Pigeon+Valley&output=embed" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr />
+
+    <!-- Giorno 6 -->
+    <section id="day-6" class="day">
+      <h2>Giorno 6 — Balloon flight e Zelve Open Air Museum</h2>
+      <div class="date">venerdì 28 agosto 2026</div>
+
+      <div class="grid">
+        <div>
+          <div class="program">
+            <h4>Programma</h4>
+            <ul>
+              <li>Presto al mattino: pick-up e volo in mongolfiera (durata tipica 45–75 min).</li>
+              <li>Resto della mattina: rientro in hotel e visita a Zelve Open Air Museum nel pomeriggio.</li>
+            </ul>
+          </div>
+
+          <div class="visit-list">
+            <div class="visit">
+              <strong>Volo in mongolfiera</strong>
+              <p>Esperienza iconica di Cappadocia: decine di palloni all'alba sopra le formazioni rocciose.</p>
+              <div class="links">
+                <a href="https://en.wikipedia.org/wiki/Hot_air_balloon" target="_blank" rel="noopener">Informazioni generali (EN)</a>
+                <a href="https://commons.wikimedia.org/w/index.php?search=Cappadocia+hot+air+balloon&title=Special%3AMediaSearch&type=image" target="_blank" rel="noopener">Immagini</a>
+              </div>
+            </div>
+
+            <div class="visit">
+              <strong>Zelve Open Air Museum</strong>
+              <p>Sito rupestre con abitazioni e chiese scavate nella roccia; antico insediamento monastico e villaggio.</p>
+              <div class="links">
+                <a href="https://en.wikipedia.org/wiki/Zelve_Monastery" target="_blank" rel="noopener">Maggiori informazioni (EN)</a>
+                <a href="https://commons.wikimedia.org/w/index.php?search=Zelve+Open+Air+Museum&title=Special%3AMediaSearch&type=image" target="_blank" rel="noopener">Immagini</a>
+              </div>
+            </div>
+          </div>
+
+          <a class="back-link" href="#toc">Torna all'indice</a>
+          <div class="sleep">Pernottamento: Uçhisar Kaya Hotel — <a href="https://www.uchisarkayaotel.com/en" target="_blank" rel="noopener">sito</a></div>
+        </div>
+
+        <div>
+          <div class="map-large">
+            <iframe width="100%" height="100%" frameborder="0" style="border:0"
+              src="https://www.google.com/maps?q=Goreme+balloon+flight+site&output=embed" allowfullscreen></iframe>
+          </div>
+
+          <div class="map" style="margin-top:12px">
+            <iframe width="100%" height="100%" frameborder="0" style="border:0"
+              src="https://www.google.com/maps?q=Zelve+Open+Air+Museum&output=embed" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr />
+
+    <!-- Giorno 7 (maps order swapped: first Kaymaklı map, then flight map) -->
+    <section id="day-7" class="day">
+      <h2>Giorno 7 — Kaymaklı Underground City; Trasferimento NAV — Nevşehir Kapadokya → SAW — Istanbul Sabiha Gökçen</h2>
+      <div class="date">sabato 29 agosto 2026</div>
+
+      <div class="grid">
+        <div>
+          <div class="program">
+            <h4>Programma</h4>
+            <ul>
+              <li>Mattina: visita a Kaymaklı Underground City.</li>
+              <li>Pomeriggio: trasferimento verso l'aeroporto di SAW e check-in in hotel vicino all'aeroporto.</li>
+              <li>Opzione: visita ad Avanos per laboratori di ceramica e dimostrazioni artigianali.</li>
+            </ul>
+          </div>
+
+          <div class="visit-list">
+            <div class="visit">
+              <strong>Kaymaklı Underground City</strong>
+              <p>Una delle grandi città sotterranee di Cappadocia, con più livelli scavati nella roccia.</p>
+              <div class="links">
+                <a href="https://it.wikipedia.org/wiki/Kaymakl%C4%B1" target="_blank" rel="noopener">Maggiori informazioni</a>
+                <a href="https://commons.wikimedia.org/w/index.php?search=Kaymakli+Underground+City&title=Special%3AMediaSearch&type=image" target="_blank" rel="noopener">Immagini</a>
+              </div>
+            </div>
+
+            <div class="visit">
+              <strong>Four Points by Sheraton Istanbul Pendik</strong>
+              <p>Hotel moderno vicino a Sabiha Gökçen, comodo per voli di rientro o scali.</p>
+              <div class="links">
+                <a href="https://www.marriott.com/en-us/hotels/isnfp-four-points-istanbul-pendik/" target="_blank" rel="noopener">Sito ufficiale hotel</a>
+                <a href="https://commons.wikimedia.org/w/index.php?search=Four+Points+Istanbul+Pendik&title=Special%3AMediaSearch&type=image" target="_blank" rel="noopener">Immagini</a>
+              </div>
+            </div>
+
+            <div class="visit">
+              <strong>Avanos (opzionale)</strong>
+              <p>Cittadina sul fiume Kızılırmak famosa per la tradizione della ceramica: laboratori e dimostrazioni artigianali.</p>
+              <div class="links">
+                <a href="https://en.wikipedia.org/wiki/Avanos" target="_blank" rel="noopener">Maggiori informazioni (EN)</a>
+                <a href="https://commons.wikimedia.org/w/index.php?search=Avanos&title=Special%3AMediaSearch&type=image" target="_blank" rel="noopener">Immagini</a>
+              </div>
+            </div>
+
+          </div>
+
+          <a class="back-link" href="#toc">Torna all'indice</a>
+          <div class="sleep">Pernottamento: Four Points by Sheraton Istanbul Pendik — <a href="https://www.marriott.com/en-us/hotels/isnfp-four-points-istanbul-pendik/" target="_blank" rel="noopener">sito</a></div>
+        </div>
+
+        <div>
+          <!-- swapped: first the Kaymaklı map (smaller), then the flight map (large) -->
+          <div class="map">
+            <iframe width="100%" height="100%" frameborder="0" style="border:0"
+              src="https://www.google.com/maps?q=Kaymakli+Underground+City&output=embed" allowfullscreen></iframe>
+          </div>
+
+          <div class="map-large" style="margin-top:12px">
+            <iframe width="100%" height="100%" frameborder="0" style="border:0"
+              src="https://www.google.com/maps?q=Nevsehir+to+Sabiha+Gokcen+flight&output=embed" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr />
+
+    <!-- Giorno 8 -->
+    <section id="day-8" class="day">
+      <h2>Giorno 8 — Volo SAW — Istanbul Sabiha Gökçen → BGY — Bergamo Orio al Serio e rientro in Italia</h2>
+      <div class="date">domenica 30 agosto 2026</div>
+
+      <div class="grid">
+        <div>
+          <div class="program">
+            <h4>Programma</h4>
+            <ul>
+              <li>Mattina: trasferimento all'aeroporto Sabiha Gökçen (SAW) e check-in per il volo di rientro.</li>
+              <li>Volo: SAW → BGY; arrivo e rientro a casa.</li>
+            </ul>
+          </div>
+
+          <div class="visit-list">
+            <div class="visit">
+              <strong>Partenze e logistica</strong>
+              <p>Controllare orari di check-in e documenti di viaggio; prevedere tempo per traffico e controlli aeroportuali.</p>
+            </div>
+
+            <div class="visit">
+              <strong>Fine del viaggio</strong>
+              <p>Rientro a casa e conclusione dell'itinerario.</p>
+            </div>
+          </div>
+
+          <a class="back-link" href="#toc">Torna all'indice</a>
+          <div class="sleep">Pernottamento: —</div>
+        </div>
+
+        <div>
+          <div class="map">
+            <iframe width="100%" height="100%" frameborder="0" style="border:0"
+              src="https://www.google.com/maps?q=Sabiha+Gokcen+Airport&output=embed" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p>Viaggio in Turchia. Documento generato il 20/02/2026 alle ore 18:34:00</p>
+    </footer>
+
+  </main>
+</body>
+</html>
